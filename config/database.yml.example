@@ -8,8 +8,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
-  username:
-  password:
+  username: Tsar
+  password: adamsmith8
 
 development:
   <<: *default
