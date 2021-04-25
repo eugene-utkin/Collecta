@@ -1,11 +1,6 @@
 <h1>Add a Book</h1>
 <p>You can add a book here</p>
 
-<%= form_for resource,
-             as: resource_name,
-             url: registration_path(resource_name),
-             html: { class: 'form-horizontal',
-                     id: 'registration_form' } do |form| %>
-
+<%= form_for :book, url: books_path do |f| %>
 
 <% end %>
