@@ -2,5 +2,6 @@
 <p>You can add a book here</p>
 
 <%= form_for :book, url: books_path do |f| %>
-
+  <%= f.label :title %>:
+  <%= f.text_field :title %><br />
 <% end %>
