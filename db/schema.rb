@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_04_13_101544) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
-    t.date "publication_year"
+    t.integer "publication_year"
     t.string "publication_place"
     t.string "publishing_company"
     t.integer "number_of_copies"
