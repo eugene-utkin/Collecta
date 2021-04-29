@@ -3,7 +3,8 @@ class CreateBooks < ActiveRecord::Migration[6.0]
     create_table :books do |t|
       t.string :title
       t.integer :publication_year
-      t.string :publication_place
+      t.string :publication_country
+      t.string :publication_city
       t.string :publishing_company
       t.integer :number_of_copies
     end
