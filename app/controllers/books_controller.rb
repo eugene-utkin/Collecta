@@ -9,7 +9,7 @@ class BooksController < ApplicationController
   end
 
   def create
-    @book = Book.new(product_params)
+    @book = Book.new(book_params)
 
     respond_to do |format|
       if @book.save
