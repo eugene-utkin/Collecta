@@ -7,6 +7,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.string :publication_city
       t.string :publishing_company
       t.integer :number_of_copies
+      t.integer :isbn
     end
   end
 end
