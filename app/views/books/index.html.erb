@@ -12,10 +12,6 @@
     <tbody>
     	<% @books.each do |book| %>
         	<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-            	<td class="image">
-                	<%= image_tag(book.image_url, class: 'list_image') %>
-                </td>
-
                 <td class="description">
                 	<h2><%= book.title %></h2>
                     <p>
