@@ -1,0 +1,29 @@
+<h1>Edit Book</h1>
+
+<%= form_with(model: @book, url: book_path(@book), method: :put) do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title %><br />
+
+  <%= f.label :description %>:
+  <%= f.text_area :description %><br />
+
+  <%= f.label :publication_year %>:
+  <%= f.number_field :publication_year %><br />
+
+  <%= f.label :publication_city %>:
+  <%= f.text_field :publication_city %><br />
+
+  <%= f.label :publication_country %>:
+  <%= f.text_field :publication_country %><br />
+
+  <%= f.label :publishing_company %>:
+  <%= f.text_field :publishing_company %><br />
+
+  <%= f.label :number_of_copies %>:
+  <%= f.number_field :number_of_copies %><br />
+
+  <%= f.label :isbn %>:
+  <%= f.number_field :isbn %><br />
+
+  <%= f.submit %>
+<% end %>
