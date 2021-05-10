@@ -3,7 +3,6 @@ class CreateCountries < ActiveRecord::Migration[6.0]
     create_table :countries do |t|
       t.hstore :name_translations
       t.timestamps
-      
     end
   end
 end
