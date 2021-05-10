@@ -1,0 +1,9 @@
+<h1>Add a Country</h1>
+<p>You can add a country here or <%= link_to "get back", countries_path %> to countries index</p>
+
+<%= form_with(model: @country, url: countries_path) do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.submit %>
+<% end %>
