@@ -10,9 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_12_111816) do
+ActiveRecord::Schema.define(version: 2021_04_18_104350) do
 
   # These are extensions that must be enabled in order to support this database
+  enable_extension "hstore"
   enable_extension "plpgsql"
+
+  create_table "books", force: :cascade do |t|
+    t.string "title"
+    t.integer "publication_year"
+    t.text "description"
+    t.string "image_url"
+    t.string "publication_country"
+    t.string "publication_city"
+    t.string "publishing_company"
+    t.integer "number_of_copies"
+    t.integer "isbn"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.hstore "name_translations"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
 end
