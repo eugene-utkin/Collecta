@@ -51,7 +51,7 @@ class BooksController < ApplicationController
   end
 
   def check_if_book_title_exists
-    @similar_books = Book.where('title ')
+    @similar_books = Book.where("title LIKE ?", "%#{params[:title]}%")
   end
   
   private
