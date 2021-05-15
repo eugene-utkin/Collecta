@@ -49,6 +49,10 @@ class BooksController < ApplicationController
 
     redirect_to books_path
   end
+
+  def check_if_book_title_exists
+    @similar_books = Book.where('title ')
+  end
   
   private
     def book_params
