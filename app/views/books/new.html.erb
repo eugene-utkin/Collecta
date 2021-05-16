@@ -5,7 +5,7 @@
   <%= f.label :title %>:
   <%= f.text_field :title, id: "book_title"%><br />
   <div id="similar_books" class="similars">
-         <%= render_if @books.any?, @books %>
+         <%= render_if @books && @books.any?, @books %>
  </div>
 
   <%= f.label :description %>:
