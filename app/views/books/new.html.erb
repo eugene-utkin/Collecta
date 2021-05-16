@@ -4,6 +4,9 @@
 <%= form_with(model: @book, url: books_path) do |f| %>
   <%= f.label :title %>:
   <%= f.text_field :title, id: "book_title"%><br />
+  <div id="similar_books" class="similars">
+         <%= render_if @books.any?, @books %>
+ </div>
 
   <%= f.label :description %>:
   <%= f.text_area :description %><br />
