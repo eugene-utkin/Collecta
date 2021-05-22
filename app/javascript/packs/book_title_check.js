@@ -1,4 +1,4 @@
-$( "#title" ).keyup(function() {
+$( "#book_title" ).keyup(function() {
      $.ajax({
         url: '<%= check_if_book_title_exists_path %>',
         type: "GET",
