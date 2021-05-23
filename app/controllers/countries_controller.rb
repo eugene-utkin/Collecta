@@ -34,4 +34,13 @@ class CountriesController < ApplicationController
     @country = Country.find(params[:id])
   end
 
+  def update
+    @country = Country.find(params[:id])
+    if @country.update(country_params)
+      redirect_to @country
+    else
+      render action: 'edit'
+    end
+  end
+
 end
