@@ -5,9 +5,9 @@
   <%= f.label :title %>:
   <%= f.text_field :title, id: "book_title"%><br />
 
-<div>
-
-</div>
+<section>
+  <p>Similar books:</p>
+</section>
 
 <% if @similar_books %>
   <%= hidden_div_if(@similar_books.empty?, id: 'similar_books') do %>
