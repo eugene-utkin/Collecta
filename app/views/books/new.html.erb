@@ -3,14 +3,14 @@
 
 <%= form_with(model: @book, url: books_path) do |f| %>
   <%= f.label :title %>:
-  <%= f.text_field :title, id: "book_title"%><br />
+  <%= f.text_field :title, id: "book-title" %><br />
 
-<section class="similar-books">
+<section id="similar-books">
   <p>Similar books:</p>
 </section>
 
 <% if @similar_books %>
-  <%= hidden_div_if(@similar_books.empty?, id: 'similar_books') do %>
+  <%= hidden_div_if(@similar_books.empty?) do %>
     <%= render @similar_books %>
   <% end %>
     <%= render @similar_books %>
