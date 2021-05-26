@@ -50,4 +50,8 @@ class CountriesController < ApplicationController
     redirect_to countries_path
   end
 
+  private
+    def country_params
+      params.require(:country).permit(:name_translations)
+    end
 end
