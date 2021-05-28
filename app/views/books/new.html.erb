@@ -54,7 +54,10 @@
         console.log("Sent to Controller");
       },
       success: function(data, textStatus, xhr) {
-                   // do something with your returned data //
+                   console.log(data);
+                   console.log(data['message']);
+                   console.log(textStatus);
+                   console.log(xhr);
                    if (data.available == false)
                    {
                     $('#book-title').addClass("error");   // style the class with your required css
