@@ -49,7 +49,7 @@
     $.ajax({
       url: '<%= check_if_book_title_exists_path %>',
       type: "GET",
-      data: { title: $('book_title').val() },
+      data: { title: $('#book_title').val() },
       complete: function() {
         console.log("Sent to Controller");
       },
