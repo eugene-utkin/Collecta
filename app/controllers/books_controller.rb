@@ -51,7 +51,7 @@ class BooksController < ApplicationController
   end
 
   def check_if_book_title_exists
-    @book = Book.new(book_params)
+    @book = params[:title]
     @similar_books = Book.where("title LIKE ?", "%#{params[:title]}%")
     if @similar_books.present?
         render json: {:success => 0, :message => 'Similar books exist', :book_available => true}
