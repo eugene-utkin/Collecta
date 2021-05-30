@@ -11,7 +11,9 @@
     <tbody>
     	<% @countries.each do |country| %>
         	<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-            
+            	<td class="description">
+                	<h2><%= country.name %></h2>
+                </td>
             </tr>
         <% end %>
    	</tbody>
