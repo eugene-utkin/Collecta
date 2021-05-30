@@ -4,32 +4,14 @@
 	<tfoot>
 		<tr>
 			<td colspan="3">
-            	<%= link_to "Add Book", new_book_path %>
+            	<%= link_to "Add Country", new_country_path %>
             </td>
         </tr>
     </tfoot>
     <tbody>
-    	<% @books.each do |book| %>
+    	<% @countries.each do |country| %>
         	<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
-                <td class="description">
-                	<h2><%= book.title %></h2>
-                    <p>
-						<%= truncate(strip_tags(book.description), length: 80) %>
-                    </p>
-                </td>
-
-                <td class="actions">
-                	<ul>
-                    	<li><%= link_to 'Show', book %></li>
-                        <li><%= link_to 'Edit', edit_book_path(book) %></li>
-                        <li>
-                        	<%= link_to 'Destroy',
-                                        book,
-                                        method: :delete,
-                                        data: { confirm: 'Are you sure?' } %>
-                        </li>
-                    </ul>
-                </td>
+            
             </tr>
         <% end %>
    	</tbody>
