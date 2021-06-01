@@ -45,7 +45,7 @@
   var similar_books = document.querySelector("#similar-books");
 
   book_title.addEventListener("keyup", function () {
-    console.log("Print Stop");
+    console.log($(book_title).val());
     $.ajax({
       url: '<%= check_if_book_title_exists_path %>',
       type: "GET",
