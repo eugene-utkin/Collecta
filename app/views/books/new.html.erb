@@ -45,7 +45,6 @@
   var similar_books = document.querySelector("#similar-books");
 
   book_title.addEventListener("keyup", function () {
-    console.log($(book_title).val());
     $.ajax({
       url: '<%= check_if_book_title_exists_path %>',
       type: "GET",
@@ -54,10 +53,7 @@
         console.log("Sent to Controller");
       },
       success: function(data, textStatus, xhr) {
-                   console.log(data);
                    console.log(data['message']);
-                   console.log(textStatus);
-                   console.log(xhr);
                    if (data.available == false)
                    {
                     $('#book-title').addClass("error");   // style the class with your required css
