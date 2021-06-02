@@ -55,9 +55,9 @@ class BooksController < ApplicationController
     @similar_books = @book
    # Book.where("title LIKE ?", "%#{params[:title]}%")
     if @similar_books.present?
-        render json: {:success => 0, :message => 'Similar books exist', :book_available => true}
+        render json: {:success => 0, :message => 'Similar books exist!', :book_available => true}
       else  
-        render json: {:success => 1, :message => @book, :book_available => false}
+        render json: {:success => 1, :message => 'The book is not in database', :book_available => false}
     end   
   end
   

@@ -10,9 +10,6 @@
 </section>
 
 <% if @similar_books %>
-  <%= hidden_div_if(@similar_books.empty?) do %>
-    <%= render @similar_books %>
-  <% end %>
     <%= render @similar_books %>
 <% end %>
 
