@@ -53,7 +53,7 @@
         console.log("Sent to Controller");
       },
       success: function(data, textStatus, xhr) {
-                   data['message'];
+                   console.log(data['message']);
                    if (data.available == false)
                    {
                     $('#book-title').addClass("error");   // style the class with your required css
