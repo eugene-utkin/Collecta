@@ -5,13 +5,11 @@
   <%= f.label :title %>:
   <%= f.text_field :title, id: "book-title" %><br />
 
-<section id="similar-books">
-  <p>Similar books:</p>
-</section>
-
-<% if @similar_books %>
-    <%= render @similar_books %>
-<% end %>
+  <section id="similar-books">
+    <% if @similar_books %>
+      <p>Similar books:</p>
+    <% end %>
+  </section>
 
   <%= f.label :description %>:
   <%= f.text_area :description %><br />
