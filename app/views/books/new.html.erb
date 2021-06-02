@@ -6,9 +6,7 @@
   <%= f.text_field :title, id: "book-title" %><br />
 
   <section id="similar-books">
-    <% if @similar_books %>
       <p>Similar books:</p>
-    <% end %>
   </section>
 
   <%= f.label :description %>:
@@ -36,7 +34,9 @@
 <% end %>
 
 <style type="text/css">
-  #
+  #similar-books {
+    
+  }
 </style>
 
 <script>
