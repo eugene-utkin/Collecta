@@ -57,6 +57,7 @@
       },
       success: function(data, textStatus, xhr) {
                    console.log(data['message']);
+                   similar_books.classList.add("similar-show");
                    if (data.available == false)
                    {
                     $('#book-title').addClass("error");   // style the class with your required css
