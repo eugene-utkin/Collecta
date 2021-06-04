@@ -56,11 +56,15 @@
         console.log("Sent to Controller");
       },
       success: function(data, textStatus, xhr) {
-                   console.log(data['message']);
-                   console.log(data);
-                   console.log(similar_books);
-                   similar_books.classList.add("similar-show");
-                   if (data.available == false)
+
+                   if (data['success'] == 0)
+                   {
+                    console.log(data['message']);
+                    console.log(data);
+                    console.log(similar_books);
+                    similar_books.classList.add("similar-show");
+                   }
+                   else
                    {
                     similar_books.classList.remove("similar-show");
                    }
