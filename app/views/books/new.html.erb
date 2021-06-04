@@ -57,11 +57,12 @@
       },
       success: function(data, textStatus, xhr) {
                    console.log(data['message']);
+                   console.log(data);
                    console.log(similar_books);
                    similar_books.classList.add("similar-show");
                    if (data.available == false)
                    {
-                    $('#book-title').addClass("error");   // style the class with your required css
+                    similar_books.classList.remove("similar-show");
                    }
       },
       error: function() {
