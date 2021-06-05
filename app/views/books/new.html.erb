@@ -78,4 +78,13 @@
     });
   });
   
+    $(document).on('ajax:error', "#user_login", function(event, xhr) {
+    $(this)
+      .find('.form-error-message')
+      .html('<%= I18n.t('devise.sessions.user.invalid', locale: :ru) %>' +
+            '<br>' +
+            '<a href="<%= Rails.application.routes.url_helpers.new_user_confirmation_path locale: :ru %>">' +
+              '<%= I18n.t('devise.failure.new_confirmation_q', locale: :ru) %>' +
+            '</a>');
+  });
 </script>
