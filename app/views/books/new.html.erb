@@ -6,8 +6,10 @@
   <%= f.text_field :title, id: "book-title" %><br />
 
   <section class="similar-books">
-      <p>Similar books:</p>
-      <%= @similar_books %>
+      <div class="similar-books-content">
+        <p>Similar books:</p>
+        <%= @similar_books %>
+      </div>
   </section>
 
   <%= f.label :description %>:
