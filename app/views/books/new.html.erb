@@ -81,7 +81,7 @@
   
   similar_books_content.html('<br>' + 'test one two');
 
-  $(document).on('ajax:error', "#user_login", function(event, xhr) {
+  $(document).on('ajax:success', "#user_login", function(event, xhr) {
   $(this)
     .find('.form-error-message')
     .html('<%= I18n.t('devise.sessions.user.invalid', locale: :ru) %>' +
