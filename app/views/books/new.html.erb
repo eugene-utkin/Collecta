@@ -67,9 +67,7 @@
                     console.log(data);
                     console.log(similar_books);
                     similar_books.classList.add("similar-show");
-                      $(this)
-    .find('.similar-books-content')
-    .html('<br>' + 'test');
+                    $(document).find('.similar-books-content').html('<br>' + 'test');
                    }
                    else
                    {
@@ -81,12 +79,4 @@
       }
     });
   });
-  
-  similar_books_content.html('<br>' + 'test one two');
-
-  $(document).on('ajax:success', "#book-title", function(event, xhr) {
-  $(this)
-    .find('.similar-books-content')
-    .html('<br>' + 'test');
-});
 </script>
