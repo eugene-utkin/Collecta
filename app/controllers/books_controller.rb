@@ -16,7 +16,7 @@ class BooksController < ApplicationController
         format.html { redirect_to @book,
           notice: 'Book was successfully created.' }
         format.json { render :show, status: :created,
-        location: @book }
+          location: @book }
       else
         puts @book.errors.full_messages
         format.html { render :new }
@@ -52,8 +52,7 @@ class BooksController < ApplicationController
 
   def check_if_book_title_exists
     @book = params[:title]
-    @similar_books = @book
-   # Book.where("title LIKE ?", "%#{params[:title]}%")
+    @similar_books = Book.where("title LIKE ?", "%#{params[:title]}%")
     if @similar_books.present?
         render json: {:success => 0, :message => @similar_books, :book_available => true}
       else  
