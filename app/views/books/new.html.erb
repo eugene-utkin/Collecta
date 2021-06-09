@@ -7,10 +7,7 @@
 
   <section class="similar-books">
       <div class="similar-books-content">
-        <p>Similar books:</p>
-        <% @similar_books.each do |book| %>
-          <p>We got a match!<p/>
-        <% end %>
+
       </div>
   </section>
 
@@ -67,8 +64,15 @@
                     console.log(data['message']);
                     console.log(data);
                     console.log(similar_books);
+                    htmlcode = '<% if @similar_books.present? %>
+                        <p>Similar books:</p>
+                        <% @similar_books.each do |book| %>
+                        <p>We got a match!</p>
+                      <% end %>
+                    <% end %>'
                     similar_books.classList.add("similar-show");
-                    $(document).find('.similar-books-content').html('<br>' + data['message'] + '<br>');
+                    $(document).find('.similar-books-content').html('<br>' + data['message'] + '<br>' + htmlcode);
+
                    }
                    else
                    {
