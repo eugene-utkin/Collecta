@@ -8,7 +8,9 @@
   <section class="similar-books">
       <div class="similar-books-content">
         <p>Similar books:</p>
-        <%= @similar_books %>
+        <%= @similar_books each do |book| %>
+          <p>We got a match!<p/>
+        <% end $>
       </div>
   </section>
 
