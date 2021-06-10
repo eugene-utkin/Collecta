@@ -65,7 +65,7 @@
                     console.log(data);
                     console.log(similar_books);
                     similar_books.classList.add("similar-show");
-                    $(document).find('.similar-books-content').html('<br>' + data['message'] + '<br>' + htmlcode);
+                    $(document).find('.similar-books-content').html('<br>' + <%= render "similar_books" %> + '<br>');
                    }
                    else
                    {
