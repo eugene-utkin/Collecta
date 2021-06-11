@@ -1,1 +1,3 @@
-<p>Check!</p>
+<% if @similar_books.present? %>
+	<%= @similar_books.map %>
+<% end %>
