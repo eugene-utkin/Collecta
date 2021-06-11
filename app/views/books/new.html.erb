@@ -60,6 +60,7 @@
       success: function(data, textStatus, xhr) {
                    if (data['success'] == 0)
                    {
+                    var js_similar_books = [<%= raw data['mesage'].to_json %>];
                     console.log(data['message']);
                     console.log(data);
                     console.log(similar_books);
