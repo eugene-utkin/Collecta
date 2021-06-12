@@ -60,14 +60,13 @@
       success: function(data, textStatus, xhr) {
                    if (data['success'] == 0)
                    {
-                    console.log(data['message'.title]);
+                    console.log(data['message']['0']['title']);
                     console.log(data);
                     console.log(similar_books);
                     similar_books.classList.add("similar-show");
                     $(document).find('.similar-books-content').html('<br>' +
-                      data['message']['title'] +
-                      data['message'].forEach(function(entry) {
-                        entry['title'];
+                      data['message'].forEach(function(entry, index) {
+                        entry['index']['title'];
                         '<br>';
                       }) + '<br>');
                    }
