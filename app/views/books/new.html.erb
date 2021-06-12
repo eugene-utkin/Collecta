@@ -61,13 +61,16 @@
                    if (data['success'] == 0)
                    {
                     data['message'].forEach(function(entry) {
-                      console.log(entry);
+                      entry.title;
                     });
                     console.log(data['message']);
                     console.log(data);
                     console.log(similar_books);
                     similar_books.classList.add("similar-show");
-                    $(document).find('.similar-books-content').html('<br>' + data['message'] + '<br>');
+                    $(document).find('.similar-books-content').html('<br>' + data['message'].forEach(function(entry) {
+                      entry['title'];
+                      '<br>'
+                    }) + '<br>');
                    }
                    else
                    {
