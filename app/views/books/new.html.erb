@@ -62,13 +62,12 @@
                    {
                     var test_array = data['message'].forEach(function(entry, index)
                       {
-                        console.log(entry['title']);
-                        console.log(index);
+                        entry;
+                        index;
                       });
-                    test_array;
                     similar_books.classList.add("similar-show");
-                    $(document).find('.similar-books-content').html('<br>' +
-                      JSON.stringify(test_array) +
+                    document.find('.similar-books-content').html('<br>' +
+                      data['message'] +
                       '<br>');
                    }
                    else
