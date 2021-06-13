@@ -68,7 +68,7 @@
                     test_array;
                     similar_books.classList.add("similar-show");
                     $(document).find('.similar-books-content').html('<br>' +
-                      test_array[0] +
+                      JSON.stringify(test_array) +
                       '<br>');
                    }
                    else
