@@ -67,9 +67,7 @@
                       });
                     similar_books.classList.add("similar-show");
                     $(document).find('.similar-books-content').html('<br>' +
-                      'data['message'].forEach(function(entry, index) {' + 
-                        'entry;' +
-                      '})' +
+                      data['message'].forEach(function(entry){entry}) +
                       '<br>');
                    }
                    else
