@@ -60,13 +60,8 @@
       success: function(data, textStatus, xhr) {
                    if (data['success'] == 0)
                    {
-                    var test_array = data['message'].forEach(function(entry, index)
-                      {
-                        entry;
-                        index;
-                      });
                     similar_books.classList.add("similar-show");
-                    document.find('.similar-books-content').html('<br>' +
+                    $(document).find('.similar-books-content').html('<br>' +
                       data['message'] +
                       '<br>');
                    }
