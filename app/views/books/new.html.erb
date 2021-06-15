@@ -62,7 +62,7 @@
                    {
                     similar_books.classList.add("similar-show");
                     $(document).find('.similar-books-content').html('<br>' +
-                      data['message'] +
+                      '<%= render partial: "similar_books", object: data['message'] %>' + data['message'] +
                       '<br>');
                    }
                    else
