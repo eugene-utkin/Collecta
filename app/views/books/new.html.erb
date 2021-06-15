@@ -60,10 +60,9 @@
       success: function(data, textStatus, xhr) {
                    if (data['success'] == 0)
                    {
-                    var @test = data['message'];
                     similar_books.classList.add("similar-show");
                     $(document).find('.similar-books-content').html('<br>' +
-                      '<%= render partial: "similar_books", object: @test %>' + data['message'] +
+                      data['message'] +
                       '<br>');
                    }
                    else
