@@ -60,6 +60,7 @@
       success: function(data, textStatus, xhr) {
                    if (data['success'] == 0)
                    {
+                    var test = data;
                     similar_books.classList.add("similar-show");
                     $(document).find('.similar-books-content').html('<br>' +
                       '<%= render partial: "similar_books", locals: { similar_books: "[1, 2, 3]" } %>' + data['message'] +
