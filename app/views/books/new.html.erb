@@ -61,8 +61,7 @@
                    if (data['success'] == 0)
                    {
                     similar_books.classList.add("similar-show");
-                    $(document).find('.similar-books-content').html('<br>' + '@data = data['message']' +
-                      '<%= render partial: "similar_books", locals:  @data['message'] %>' +
+                    $(document).find('.similar-books-content').html('<br>' + data['message'] +
                       '<br>');
                    }
                    else
