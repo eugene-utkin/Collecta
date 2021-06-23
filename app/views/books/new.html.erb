@@ -61,7 +61,7 @@
                    if (data['success'] == 0)
                    {
                     similar_books.classList.add("similar-show");
-                    $(document).find('.similar-books-content').html('<br>' + '<% render(similar_books) %>' +
+                    $(document).find('.similar-books-content').html('<br>' + escape_JavaScript("<%=render partial: similar_books, locals=>{ :similar_books => data}%>"); +
                       '<br>');
                    }
                    else
