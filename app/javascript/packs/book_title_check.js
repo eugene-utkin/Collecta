@@ -1,18 +1,29 @@
-$( "#book_title" ).keyup(function() {
-     $.ajax({
-        url: '<%= check_if_book_title_exists_path %>',
-        type: "GET",
-        data: { title: $('#book_title').val() },
-        complete: function() {},
-        success: function(data, textStatus, xhr) {
-                   // do something with your returned data //
-                   if (data.available == false)
+var book_title = document.querySelector("#book-title");
+var similar_books = document.querySelector(".similar-books");
+
+book_title.addEventListener("keyup", function () {
+    $.ajax({
+      url: '<%= check_if_book_title_exists_path %>',
+      type: "GET",
+      data: { title: $(book_title).val() },
+      complete: function() {
+        console.log("Sent to Controller");
+      },
+      success: function(data, textStatus, xhr) {
+                   if (data['success'] == 0)
                    {
-                    $('#book_title').addClass("error");   // style the class with your required css
+                    similar_books.classList.add("similar-show");
+                    $(document).find('.similar-books-content').html('<br>' +
+                      '<%= render partial: 'similar_books', locals: { items: @similar_books } %>' +
+                      '<br>');
                    }
-                 },
-        error: function() {
+                   else
+                   {
+                    similar_books.classList.remove("similar-show");
+                   }
+      },
+      error: function() {
             alert("Your Ajax error! message")
-       }
-     });
-}); 
+      }
+    });
+  });
