@@ -15,4 +15,4 @@ $( "#book_title" ).keyup(function() {
             alert("Your Ajax error! message")
        }
      });
-}); 
+});
