@@ -7,7 +7,8 @@
 
   <section class="similar-books">
       <div class="similar-books-content">
-
+        <p>Similar books:</p>
+        <%= @similar_books %>
       </div>
   </section>
 
@@ -50,7 +51,7 @@
   var similar_books = document.querySelector(".similar-books");
 
   book_title.addEventListener("keyup", function () {
-    book_title.ajax({
+    $.ajax({
       url: '<%= check_if_book_title_exists_path %>',
       type: "GET",
       data: { title: $(book_title).val() },
@@ -58,11 +59,14 @@
         console.log("Sent to Controller");
       },
       success: function(data, textStatus, xhr) {
+
                    if (data['success'] == 0)
                    {
+                    console.log(data['message']);
+                    console.log(data);
+                    console.log(similar_books);
                     similar_books.classList.add("similar-show");
-                    $(document).find('.similar-books-content').html('<br>' + data['message'] +
-                      '<br>');
+                    $(document).find('.similar-books-content').html('<br>' + data['message']);
                    }
                    else
                    {
