@@ -6,7 +6,6 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
-    @similar_books = []
   end
 
   def create
