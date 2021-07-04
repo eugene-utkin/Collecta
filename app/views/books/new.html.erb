@@ -7,7 +7,7 @@
 
   <section class="similar-books">
       <div class="similar-books-content">
-        
+
       </div>
   </section>
 
@@ -64,7 +64,7 @@ book_title.addEventListener("keyup", function () {
                     console.log(data);
                     console.log(similar_books);
                     similar_books.classList.add("similar-show");
-                    $(document).find('.similar-books-content').html('<br>' + data['message']['0']['title']);
+                    $(document).find('.similar-books-content').html('<br>' + '<%= escape_javascript render(@similar_books) %>' + data['message']['0']['title']);
                    }
                    else
                    {
