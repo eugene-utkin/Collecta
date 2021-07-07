@@ -58,6 +58,7 @@ book_title.addEventListener("keyup", function () {
       console.log("Sent to Controller");
     },
     success: function(data, textStatus, xhr) {
+      console.log(data);
       if (data['success'] == 0)
         {
                     console.log(data['message']);
