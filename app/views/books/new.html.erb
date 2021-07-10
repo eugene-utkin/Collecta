@@ -67,10 +67,10 @@ book_title.addEventListener("keyup", function () {
                     similar_books.classList.add("similar-show");
                     $(document).find('.similar-books-content').html(data['message']);
                    }
-                   else
-                   {
-                    similar_books.classList.remove("similar-show");
-                   }
+      else
+        {
+          similar_books.classList.remove("similar-show");
+        }
       },
       error: function() {
             alert("Your Ajax error! message")
