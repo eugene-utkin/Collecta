@@ -1,2 +1,2 @@
 console.log("<%= @similar_books %>");
-$(document).find('.similar-books-content').replace("<%= j render(partial: 'check_it') %>");
+$(document).find('.similar-books-content').html("<%= j render(partial: 'similar_books') %>");
