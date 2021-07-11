@@ -60,15 +60,7 @@ book_title.addEventListener("keyup", function () {
     success: function(data, textStatus, xhr) {
       console.log(data);
       console.log("Check 1");
-      if (data['success'] == 0)
-        {
-                    console.log(data['message']);
-                    console.log(data);
-                    console.log(similar_books);
-                    similar_books.classList.add("similar-show");
-                    console.log("Check 2");
-                   }
-      else
+      if (data['success'] == 1)
         {
           similar_books.classList.remove("similar-show");
           console.log("Check 3");
