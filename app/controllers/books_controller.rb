@@ -57,7 +57,6 @@ class BooksController < ApplicationController
     respond_to do |format|
       if @similar_books.present? && @book.length > 0
         format.js
-        format.json { render json: {:success => 0, :message => @similar_books, :book_available => true} }
       else  
         format.json { render json: {:success => 1, :message => 'The book is not in database', :book_available => false} }
       end
