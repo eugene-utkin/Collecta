@@ -1,7 +1,7 @@
 var book_title = document.querySelector("#book-title");
 var similar_books = document.querySelector(".similar-books");
 
-book_title.addEventListener("keyup", function () {
+$( "#book_title" ).addEventListener("keyup", function () {
   $.ajax({
     url: '<%= check_if_book_title_exists_path %>',
     type: "GET",
