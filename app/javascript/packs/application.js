@@ -7,8 +7,7 @@ require("jquery")
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-
-stub("packs/book_title_check")
+require("packs/book_title_check")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
