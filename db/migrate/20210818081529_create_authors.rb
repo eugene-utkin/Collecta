@@ -3,6 +3,7 @@ class CreateAuthors < ActiveRecord::Migration[6.0]
     create_table :authors do |t|
       t.hstore :name_translations
       t.integer :birth_year
+      t.integer :birth_month
       t.timestamps
     end
   end
