@@ -6,6 +6,7 @@ class CreateAuthors < ActiveRecord::Migration[6.0]
       t.integer :birth_month
       t.integer :birth_day
       t.integer :death_year
+      t.integer :death_month
       t.timestamps
     end
   end
