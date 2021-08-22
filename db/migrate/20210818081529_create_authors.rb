@@ -11,6 +11,7 @@ class CreateAuthors < ActiveRecord::Migration[6.0]
       t.integer :death_month
       t.integer :death_day
       t.string :death_place
+      t.string :portrait_link
       t.timestamps
     end
   end
