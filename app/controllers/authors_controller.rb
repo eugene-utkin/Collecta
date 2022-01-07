@@ -8,4 +8,8 @@ class AuthorsController < ApplicationController
     @author = Author.new
   end
 
+  def show
+    @author = Author.find(params[:id])
+  end
+
 end
