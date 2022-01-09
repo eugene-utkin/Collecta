@@ -13,7 +13,7 @@
     	<% @authors.each do |author| %>
         	<tr class="<%= cycle('list_line_odd', 'list_line_even') %>">
                 <td class="description">
-                	<h2><%= author.name %></h2>
+                	<h2><%= author.main_name %></h2>
                     <p>
 						<%= truncate(strip_tags(author.description), length: 80) %>
                     </p>
