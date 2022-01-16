@@ -1,12 +1,12 @@
 <h1>Add an Author</h1>
 <p>You can add an author here or <%= link_to "get back", authors_path %> to authors index</p>
 
-<%= form_with(model: @book, url: books_path) do |f| %>
+<%= form_with(model: @book, url: authors_path) do |f| %>
   <%= f.label :title %>:
-  <%= f.text_field :title, id: "book-title" %><br />
+  <%= f.text_field :title, id: "author-name" %><br />
 
-  <section class="similar-books">
-      <div class="similar-books-content">
+  <section class="similar-authors">
+      <div class="similar-authors-content">
 
       </div>
   </section>
