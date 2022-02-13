@@ -1,6 +1,6 @@
-class CreateAuthorAddNames < ActiveRecord::Migration[6.0]
+class CreateChanges < ActiveRecord::Migration[6.0]
   def change
-    create_table :author_add_names do |t|
+    create_table :changes do |t|
       t.string :name
       t.timestamps
     end
