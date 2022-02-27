@@ -1,3 +1,3 @@
 class Language < ApplicationRecord
-  has_many main_names
+  has_many :names
 end
